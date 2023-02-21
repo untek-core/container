@@ -9,6 +9,7 @@ use Untek\Core\Container\Libs\Container;
 class IlluminateContainerConfigurator implements ContainerConfiguratorInterface
 {
 
+    /** @var Container */
     private $container;
 
     public function __construct(ContainerInterface $container)
@@ -49,5 +50,10 @@ class IlluminateContainerConfigurator implements ContainerConfiguratorInterface
     public function alias($abstract, $alias): void
     {
         $this->container->alias($abstract, $alias);
+    }
+
+    public function instance($abstract, $instance): void
+    {
+        $this->container->instance($abstract, $instance);
     }
 }
