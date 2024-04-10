@@ -2,15 +2,24 @@
 
 namespace Untek\Core\Container\Helpers;
 
-use Untek\Core\Container\Traits\ContainerAwareStaticAttributeTrait;
+use Psr\Container\ContainerInterface;
+use Untek\Core\Contract\Common\Exceptions\ReadOnlyException;
 
 class ContainerHelper
 {
 
-    use ContainerAwareStaticAttributeTrait;
+    private static ?ContainerInterface $container = null;
 
-    /*public static function getContainerConfiguratorByContainer(ContainerInterface $container): ContainerConfiguratorInterface
+    public static function setContainer(ContainerInterface $container): void
     {
-        return new ContainerConfigurator($container);
-    }*/
+        if (self::$container) {
+            throw new ReadOnlyException();
+        }
+        self::$container = $container;
+    }
+
+    public static function getContainer(): ?ContainerInterface
+    {
+        return self::$container;
+    }
 }

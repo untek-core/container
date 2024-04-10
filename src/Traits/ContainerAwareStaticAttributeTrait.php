@@ -3,7 +3,10 @@
 namespace Untek\Core\Container\Traits;
 
 use Psr\Container\ContainerInterface;
+use Untek\Core\Code\Helpers\DeprecateHelper;
 use Untek\Core\Contract\Common\Exceptions\ReadOnlyException;
+
+DeprecateHelper::hardThrow();
 
 trait ContainerAwareStaticAttributeTrait
 {
