@@ -8,7 +8,7 @@ use Untek\Core\Contract\Common\Exceptions\ReadOnlyException;
 trait ContainerAwareStaticAttributeTrait
 {
 
-    private static $container = null;
+    private static ?ContainerInterface $container = null;
 
     public static function setContainer(ContainerInterface $container): void
     {
