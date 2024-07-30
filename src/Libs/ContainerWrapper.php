@@ -21,7 +21,7 @@ class ContainerWrapper implements ContainerInterface {
         }
     }
 
-    public function get(string $id)
+    public function get(string $id): mixed
     {
         return $this->container->get($id);
     }
