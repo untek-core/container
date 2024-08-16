@@ -2,6 +2,7 @@
 
 namespace Untek\Core\Container\Libs;
 
+use Untek\Core\Code\Helpers\DeprecateHelper;
 use Untek\Core\Container\Libs\Container;
 use Psr\Container\ContainerInterface;
 use Untek\Core\Contract\Common\Exceptions\NotFoundException;
@@ -9,6 +10,8 @@ use Untek\Core\Instance\Helpers\InstanceHelper;
 use Untek\Core\Arr\Helpers\ArrayHelper;
 use Untek\Core\Container\Interfaces\ContainerConfiguratorInterface;
 use Untek\Core\Container\Libs\ContainerConfigurators\IlluminateContainerConfigurator;
+
+DeprecateHelper::hardThrow();
 
 class ContainerConfigurator implements ContainerConfiguratorInterface
 {

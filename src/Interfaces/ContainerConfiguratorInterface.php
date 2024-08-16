@@ -3,6 +3,9 @@
 namespace Untek\Core\Container\Interfaces;
 
 use Psr\Container\ContainerInterface;
+use Untek\Core\Code\Helpers\DeprecateHelper;
+
+DeprecateHelper::hardThrow();
 
 /**
  * Конфигуратор контейнера.

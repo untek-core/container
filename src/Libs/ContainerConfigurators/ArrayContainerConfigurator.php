@@ -2,10 +2,13 @@
 
 namespace Untek\Core\Container\Libs\ContainerConfigurators;
 
+use Untek\Core\Code\Helpers\DeprecateHelper;
 use Untek\Core\Container\Libs\Container;
 use Psr\Container\ContainerInterface;
 use Untek\Core\Instance\Helpers\ClassHelper;
 use Untek\Core\Container\Interfaces\ContainerConfiguratorInterface;
+
+DeprecateHelper::hardThrow();
 
 class ArrayContainerConfigurator implements ContainerConfiguratorInterface
 {

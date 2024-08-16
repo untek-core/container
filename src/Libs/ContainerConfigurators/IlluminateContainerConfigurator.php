@@ -3,8 +3,11 @@
 namespace Untek\Core\Container\Libs\ContainerConfigurators;
 
 use Psr\Container\ContainerInterface;
+use Untek\Core\Code\Helpers\DeprecateHelper;
 use Untek\Core\Container\Interfaces\ContainerConfiguratorInterface;
 use Untek\Core\Container\Libs\Container;
+
+DeprecateHelper::hardThrow();
 
 class IlluminateContainerConfigurator implements ContainerConfiguratorInterface
 {

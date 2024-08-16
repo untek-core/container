@@ -9,10 +9,13 @@ use Opis\Closure\ReflectionClosure;
 use Opis\Closure\SerializableClosure;
 use Untek\Core\Bundle\Base\BaseLoader;
 use Untek\Core\Code\Helpers\ClosureHelper;
+use Untek\Core\Code\Helpers\DeprecateHelper;
 use Untek\Core\Container\Interfaces\ContainerConfiguratorInterface;
 use Untek\Core\Container\Libs\ContainerConfigurators\ArrayContainerConfigurator;
 use Untek\Core\Instance\Libs\Resolvers\InstanceResolver;
 use Untek\Core\Instance\Libs\Resolvers\MethodParametersResolver;
+
+DeprecateHelper::hardThrow();
 
 class Container1 extends \Untek\Core\Container\Libs\Container
 {
